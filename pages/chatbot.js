@@ -30,7 +30,7 @@ const doIt = async () => {
   }
 }
 
-output = doIt();
+const output = doIt();
 
 function App() {
   return (
