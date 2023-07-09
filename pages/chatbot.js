@@ -31,9 +31,9 @@ const doIt = async () => {
 
 doIt();
 
-function App() {
+function App({completion.data}) {
   return (
-      document.write(completion.data)
+      <p>completion.data</p>
   );
 }
 
