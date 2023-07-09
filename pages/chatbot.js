@@ -19,9 +19,6 @@ const doIt = async () => {
     });
     console.log(completion.data);
     console.log(completion.data.choices[0].message);
-    export default function App(){
-      <p>{completion.data.choices[0].message}</p>
-    }
 
   } catch (error) {
     if (error.response) {
@@ -32,3 +29,7 @@ const doIt = async () => {
   }
 }
 doIt();
+
+export default function App(){
+  <p>{completion.data.choices[0].message}</p>
+}
