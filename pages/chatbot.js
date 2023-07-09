@@ -33,7 +33,7 @@ const doIt = async () => {
 
 
 function App() {
-  const output = doIt();
+  Array output = doIt();
   return (
       <h1>{output}</h1>
   );
