@@ -19,9 +19,7 @@ const doIt = async () => {
     });
     console.log(completion.data);
     console.log(completion.data.choices[0].message);
-    return {
-      props: {chattext: completion.data},
-    };
+    document.write(completion.data)
 
   } catch (error) {
     if (error.response) {
@@ -33,11 +31,3 @@ const doIt = async () => {
 }
 
 doIt();
-
-export default function App({ chattext }) {
-  return (
-      <p>{chattext}</p>
-  );
-}
-
-export default App;
