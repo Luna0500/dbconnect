@@ -32,6 +32,7 @@ const doIt = async () => {
 doIt();
 
 function App() {
+  doIt();
   return (
       <p>{completion.data}</p>
   );
