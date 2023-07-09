@@ -39,3 +39,5 @@ export default function App({ chattext }) {
       <p>{chattext}</p>
   );
 }
+
+export default App;
