@@ -19,7 +19,7 @@ const doIt = async () => {
     });
     console.log(completion.data);
     console.log(completion.data.choices[0].message);
-    return (completion.data);
+    return (completion.data.choices[0].message);
 
   } catch (error) {
     if (error.response) {
@@ -30,10 +30,8 @@ const doIt = async () => {
   }
 }
 
-
-
 function App() {
-  Array output = doIt();
+  const output = doIt();
   return (
       <h1>{output}</h1>
   );
