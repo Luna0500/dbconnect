@@ -31,7 +31,7 @@ const doIt = async () => {
 }
 
 function App() {
-  const output = JSON.parse(JSON.stringify(doIt()));
+  const output = parse(doIt());
   return (
       <h1>{output}</h1>
   );
