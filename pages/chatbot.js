@@ -5,7 +5,6 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-
 const openai = new OpenAIApi(configuration);
 const messages = [
   { role: 'user', content: 'write a whimsical paragraph about software development' }
@@ -29,7 +28,3 @@ const doIt = async () => {
   }
 }
 doIt();
-
-export default function App(){
-  <p>{completion.data.choices[0].message}</p>
-}
