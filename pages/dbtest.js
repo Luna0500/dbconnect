@@ -1,5 +1,4 @@
 import clientPromise from "../lib/mongodb";
-
 export default function Users({ users }) {
     return (
         <div>
@@ -8,15 +7,14 @@ export default function Users({ users }) {
                 {users.map((user) => (
                     <li>
                         <h2>{user.name}</h2>
-                        <h3>{user.age}</h3>
-                        <p>{user.email}</p>
+                        <p>Age: {user.age}</p>
+                        <p>Email: {user.email}</p>
                     </li>
                 ))}
             </ul>
         </div>
     );
 }
-
 export async function getServerSideProps() {
     try {
         const client = await clientPromise;
@@ -30,7 +28,7 @@ export async function getServerSideProps() {
             .toArray();
 
         return {
-            props: { users: JSON.parse(JSON.stringify(users)) },
+            props: {users: JSON.parse(JSON.stringify(users))},
         };
     } catch (e) {
         console.error(e);
