@@ -32,4 +32,9 @@ const doIt = async () => {
   }
 }
 
-doIt();
+export default App() {
+  return {
+    doIt();
+  }
+}
+
