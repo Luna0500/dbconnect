@@ -30,9 +30,10 @@ const doIt = async () => {
   }
 }
 
-const output = doIt();
+
 
 function App() {
+  const output = doIt();
   return (
       <h1>{output}</h1>
   );
