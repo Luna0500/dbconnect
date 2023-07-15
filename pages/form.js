@@ -1,4 +1,3 @@
-import clientPromise from "../lib/mongodb";
 export default function Form() {
     return (
         <div>
