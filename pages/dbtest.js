@@ -6,9 +6,7 @@ export default function Users({ users }) {
             <ul>
                 {users.map((user) => (
                     <li>
-                        <h2>{user.name}</h2>
-                        <p>Age: {user.age}</p>
-                        <p>Email: {user.email}</p>
+                        <h2>{user.first_name} {user.last_name}</h2>
                     </li>
                 ))}
             </ul>
@@ -18,10 +16,10 @@ export default function Users({ users }) {
 export async function getServerSideProps() {
     try {
         const client = await clientPromise;
-        const db = client.db("test_db");
+        const db = client.db("myFirstDatabase");
 
         const users = await db
-            .collection("users")
+            .collection("people")
             .find({})
             .sort({ name: -1 })
             .limit(20)
